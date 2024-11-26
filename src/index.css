@@ -1,13 +1,406 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+.StudentForm{
+  padding: 10px 5%;
+  background:  #3b3b3b;
+  height: 100vh;
+  padding-top: 200px;
+}
+.StudentForm form{
+  text-align: start;
+}
+.StudentForm form label{
+  color: greenyellow;
+}
+.StudentForm form input{
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.StudentForm form input:hover{
+  border: 1px solid blueviolet;
+}
+.StudentForm form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  margin-top: 5px;
+}
+.StudentForm form button{
+  outline: 0;
+  border: 0;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Nav{
+  display: flex;
+  padding: 10px 5%;
+  align-items: center;
+  justify-content: space-between;
+  background: #858584;
+}
+.Nav h1{
+  color: greenyellow;
+}
+.Nav .Right{
+  position: relative;
+}
+.Nav .Right .dropdown{
+  position: relative;
+}
+.Nav .Right .dropdown .drop-content{
+  position:  absolute;
+  display: none;
+}
+.Nav .Right .dropdown button{
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-size: 16px;
+  color: white;
+}
+.Nav .Right .dropdown:hover .drop-content{
+  display: block;
+  background: black;
+  margin-top: 0px;
+  padding: 10px;
+  border-radius: 6px;
+}
+.Nav .Right .dropdown:hover .drop-content .dropdown-item{
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 5px 0;
+}
+.container{
+  background: #3b3b3b;
+  width: 100%;
+  height: 100%;
+  padding: 50px 5%;
+}
+.container .content .title h5{
+  color: greenyellow;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.container .content .title .table-container .custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.container .content .title .table-container .custom-table th, td{
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+.container .content .title .table-container .custom-table thead tr th{
+  color: white;
+}.container .content .title .table-container .custom-table .dropDown {
+  position: relative;
+}
+
+.container .content .title .table-container .custom-table .dropDown .dropDown-Btn {
+  border: 0;
+  outline: 0;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container .content .title .table-container .custom-table .dropDown .dropdownmenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background: black;
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.container .content .title .table-container .custom-table .dropDown:hover .dropdownmenu {
+  display: block;
+}
+
+.container .content .title .table-container .custom-table .dropDown .dropdownmenu .dropdown-item {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 5px 10px;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.container .content .title .table-container .custom-table .dropDown .dropdownmenu .dropdown-item:hover {
+  background-color: grey;
+}
+/* .update-student-container {
+  background: #3b3b3b;
+  height: 100vh;
+  width: 100%;
+  padding: 30px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.update-student-form {
+  background: #2e2e2e;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.update-student-form .form-title {
+  font-size: 28px;
+  color: greenyellow;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.update-student-form .form-group {
+  margin-bottom: 15px;
+}
+
+.update-student-form .form-group label {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.update-student-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  background: #444;
+  border: 1px solid #777;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.update-student-form .form-group input:focus {
+  outline: none;
+  border-color: greenyellow;
+  box-shadow: 0 0 5px greenyellow;
+}
+
+.update-student-form .update-button {
+  width: 100%;
+  padding: 12px;
+  background-color: greenyellow;
+  color: #3b3b3b;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-student-form .update-button:hover {
+  background-color: #ffd700;
+}
+
+.update-student-form .update-button:disabled {
+  background-color: #8e8e8e;
+  cursor: not-allowed;
+}
+
+/* Container for the student details */
+.student-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #3b3b3b;
+  height: 100vh;
+}
+
+/* Card styling */
+.student-card {
+  background-color: #ccc;
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+/* Card text */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.back-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 15px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.back-button:focus {
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3b3b3b;
+  padding: 20px;
+}
+
+.form-content {
+  background: #ccc;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Form Error */
+.form-error {
+  color: #ff4d4f;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+/* Form Button */
+.form-button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.form-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Form Footer */
+.form-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.register-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+.Right {
+  display: flex;
+  align-items: center;
+}
+
+/* Individual link styles */
+.One {
+  margin-left: 15px;
+}
+
+.one {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.one:hover {
+  background-color: #555;
+  border-radius: 4px;
 }
